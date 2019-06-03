@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container bg-transparent">
         <div class="row">
             <div class="col-12">
                 <h1 class="display-4">Crystals Collectors</h1>
@@ -22,10 +22,9 @@
                 <div class="shadow-none p-3 mb-5 bg-light rounded">
                     <ol>
                         <li>You will be shown a random number at the start of the game.</li>
-                        <li>When you click on a crystal, it will add a specific amount of points to the player's total
-                            score.
+                        <li>When you click on a crystal, it will add a specific amount of points to the total score.
                         </li>
-                        <li>You win if their total score matches the random number from the beginning of the game.
+                        <li>You win if the total score matches the random number from the beginning of the game.
                         </li>
                         <li>The value of each crystal is hidden from you until you click on it.</li>
                         <li>All numbers change each new game.</li>
@@ -35,12 +34,12 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <h1 id="randomNum">RANDOM</h1>
+                <h1  class="display-2"  id="randomNum">RANDOM</h1>
             </div>
             <div class="col-6">
-                <div class="row">
+                <div class="row bg-info">
                     <div class="col-12">
-                        <div id="info"></div>
+                        <div id="info">&nbsp;</div>
                     </div>
                     <div class="col-12">
                         Wins: <span id="winCount">0</span>
@@ -58,9 +57,9 @@
             <div class="col-3"><img id="green" src="./assets/images/green.png" alt="green crystal" class="img-thumbnail crystals"></div>
         </div>
         <div class="row">
-            <div class="col-12">Your total score is:</div>
+            <div class="col-12 bg-light">Your total score is:</div>
             <div class="col-12">
-                <h1 id="score">0</h1>
+                <h1 class="display-1" id="score">0</h1>
             </div>
         </div>
     </div>
