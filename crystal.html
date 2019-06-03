@@ -15,20 +15,53 @@
 
 <body>
     <div class="container">
-        <h1 class="display-4">Crystals Collectors</h1>
-        <h2 class="display-5">🔮🔮🔮</h2>
-        <div class="shadow-none p-3 mb-5 bg-light rounded">
-            <ol>
-                <li>You will be shown a random number at the start of the game.</li>
-                <li>When you click on a crystal, it will add a specific amount of points to the player's total score.
-                </li>
-                <li>You win if their total score matches the random number from the beginning of the game.
-                </li>
-                <li>The value of each crystal is hidden from you until you click on it.</li>
-                <li>All numbers change each new game.</li>
-            </ol>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-4">Crystals Collectors</h1>
+                <h2 class="display-5">🔮🔮🔮</h2>
+                <div class="shadow-none p-3 mb-5 bg-light rounded">
+                    <ol>
+                        <li>You will be shown a random number at the start of the game.</li>
+                        <li>When you click on a crystal, it will add a specific amount of points to the player's total
+                            score.
+                        </li>
+                        <li>You win if their total score matches the random number from the beginning of the game.
+                        </li>
+                        <li>The value of each crystal is hidden from you until you click on it.</li>
+                        <li>All numbers change each new game.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h1 id="randomNum">RANDOM</h1>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        Wins: <span id="winCount">0</span>
+                    </div>
+                    <div class="col-12">
+                        Losses: <span id="lossCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-3">
+            <div class="col-3"><img id="red" src="./assets/images/red.png" alt="red crystal" class="img-thumbnail crystals"></div>
+            <div class="col-3"><img id="blue" src="./assets/images/blue.png" alt="blue crystal" class="img-thumbnail crystals"></div>
+            <div class="col-3"><img id="yellow" src="./assets/images/yellow.png" alt="yellow crystal" class="img-thumbnail crystals"></div>
+            <div class="col-3"><img id="green" src="./assets/images/green.png" alt="green crystal" class="img-thumbnail crystals"></div>
+        </div>
+        <div class="row">
+            <div class="col-12">Your total score is:</div>
+            <div class="col-12">
+                <h1 id="score">0</h1>
+            </div>
         </div>
     </div>
+
 
 </body>
 
