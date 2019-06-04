@@ -1,27 +1,31 @@
 // characters
 let char1 = {
+    'name': 'Sasa',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
 };
 let char2 = {
+    'name': 'Pratik',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
 };
 let char3 = {
+    'name': 'Nuta',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
 };
 let char4 = {
+    'name': 'Plikiv',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
 };
 
-let minPower = 1;
-let maxPower = 10;
+let minPower = 50;
+let maxPower = 120;
 
 function attack(){
     // Attack Power is 6, each attack will increase the Attack Power by 6
@@ -42,10 +46,20 @@ function setRandom(char) {
     char['Counter Attack Power']= randomNum(minPower, maxPower);
 }
 
-setRandom(char1);
-setRandom(char2);
-setRandom(char3);
-setRandom(char4);
+function setInfo(charId){
+    let characterObj = eval('char' + charId);
+    
+    setRandom(characterObj);
+
+    let name = characterObj['name'];
+    let aPower = characterObj['Attack Power'];
+    let nameID = '#c' + charId + 'name';
+    let powerID = '#c' + charId + 'power';
+    $(nameID).text(name);
+    $(powerID).text('Power: ' + aPower);
+}
+
+
 
 // sum of scores
 function sumScore(currentNum, sumNum) {
@@ -60,6 +74,10 @@ function minusPower(currentNum, minusNum) {
 }
 
 // begin when doc ready
-// $(function () {
+$(function () {
+    for (let i = 1; i < 5; i++) {
+        setInfo(i);
+    }
 
-// });
+    
+});
