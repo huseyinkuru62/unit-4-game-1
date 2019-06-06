@@ -1,27 +1,34 @@
+let pictures = ["🐮", "😼", "🐶", "🐘","🦊","😱","🤕","👴","🐻","🐰","🦀"];
+
+
 // characters
 let c1 = {
     'name': 'Sasa',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
+    'img':''
 };
 let c2 = {
     'name': 'Pratik',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
+    'img':''
 };
 let c3 = {
     'name': 'Nuta',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
+    'img':''
 };
 let c4 = {
     'name': 'Plikiv',
     'Health Points': 0,
     'Attack Power': 0,
     'Counter Attack Power': 0,
+    'img':''
 };
 
 let minPower = 10;
@@ -53,6 +60,7 @@ function setRandom(char) {
     char['Health Points'] = randomNum(minHealth, maxHealth);
     char['Attack Power'] = randomNum(8, 8);
     char['Counter Attack Power'] = randomNum(minPower, maxPower);
+    char['img'] = pictures[randomNum(0, pictures.length - 1)];
 }
 
 function setInfo(charId,firstSet = false) {
@@ -62,8 +70,11 @@ function setInfo(charId,firstSet = false) {
     }
     let name = characterObj['name'];
     let hPoints = characterObj['Health Points'];
+    let pic = characterObj['img'];
     let nameID = '#c' + charId + 'name';
     let healthId = '#c' + charId + 'health';
+    let picId = '#c' + charId + 'pic';
+    $(picId).text(pic);
     $(nameID).text(name);
     $(healthId).text('Health: ' + hPoints);
 }
