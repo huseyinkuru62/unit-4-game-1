@@ -13,3 +13,14 @@ html, body {
 #results {
     font-size: 2rem;
 }
+
+#fightBtn, #backBtn, #rest {
+    cursor: pointer; 
+}
+
+#backBtn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer; 
+}
