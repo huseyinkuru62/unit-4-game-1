@@ -9,7 +9,7 @@ function sumScore(currentNum, sumNum) {
     return total;
 }
 
-function setCrystals(){
+function setCrystals() {
     redNum = randomNum(1, 12);
     blueNum = randomNum(1, 12);
     yellowNum = randomNum(1, 12);
@@ -44,14 +44,18 @@ $(function () {
             winNum = randomNum(minNum, maxNum);
             $('#randomNum').text(winNum);
             setCrystals();
-            winCount.text(sumScore(winCount.text(),1));
+            winCount.text(sumScore(winCount.text(), 1));
         } else if (score > winNum) {
             info.text('You lost sorry 😞!');
             $('#score').text("0");
             winNum = randomNum(minNum, maxNum);
             $('#randomNum').text(winNum);
             setCrystals();
-            lossCount.text(sumScore(lossCount.text(),1));
+            lossCount.text(sumScore(lossCount.text(), 1));
         }
+    });
+
+    $('#backBtn').click(function () {
+        window.history.back();
     });
 });
