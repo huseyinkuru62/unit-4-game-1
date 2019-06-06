@@ -169,4 +169,8 @@ $(function () {
         let enemy = eval(enemeySelectedId);
         $('#results').text(fightAction(player,enemy));
     });
+
+    $('#backBtn').click(function () { 
+        window.history.back();
+    });
 });
