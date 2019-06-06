@@ -27,6 +27,10 @@ let char4 = {
 let minPower = 50;
 let maxPower = 120;
 
+let playerSelected = enemySelected = false;
+
+let playerSelectedId = enemeySelectedId = 0 ;
+
 function attack(){
     // Attack Power is 6, each attack will increase the Attack Power by 6
 
@@ -57,6 +61,8 @@ function setInfo(charId){
     let powerID = '#c' + charId + 'power';
     $(nameID).text(name);
     $(powerID).text('Power: ' + aPower);
+
+
 }
 
 
@@ -73,11 +79,32 @@ function minusPower(currentNum, minusNum) {
     return total;
 }
 
+
 // begin when doc ready
 $(function () {
     for (let i = 1; i < 5; i++) {
         setInfo(i);
     }
+    let charactersList = $('.chracters');
+    charactersList.click(function(){
 
-    
+        let selectedChar = $(this).parent();
+        if (!playerSelected){
+            $('#instructions').hide();
+            playerSelectedId = $(selectedChar).attr("id");
+            selectedChar.remove();
+            playerSelected = true;
+            $('#player').append(selectedChar);
+            $('#playerCharacter').text("Your character:");
+            $('#info').text("Select your enemy:");
+        } else if ((playerSelected) && (!enemySelected)){
+            enemeySelectedId = $(this).attr("id");
+            selectedChar.remove();
+            enemySelected = true;
+            $('#enemy').append(selectedChar);
+            $('#enemyCharacter').text("Your enemy:");
+            $('#info').text("Remaining enemies:");
+            $('#fightBtn').prop('disabled', false);
+        }
+     });
 });
