@@ -9,3 +9,7 @@ html, body {
 .crystals:hover {
     filter: grayscale(0%);
 }
+
+#results {
+    font-size: 2rem;
+}

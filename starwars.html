@@ -15,7 +15,7 @@
 
 <body>
     <div class="container bg-transparent">
-        <div class="row">
+        <div id="topBanner" class="row">
             <div class="col-12">
                 <h1 class="display-4">Star Wars</h1>
                 <h2 class="display-5">🌠🌠🌠</h2>
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="charactersAvailable">
+        <div id="charactersAvailable" class="row">
             <div class="col-12">
                 <h1 id="info" class="display-5"></h1>
             </div>
@@ -49,7 +49,7 @@
                     <div class="card-img-top text-center display-3">😼</div>
                     <div class="card-body">
                         <h5 id="c1name" class="card-title"></h5>
-                        <h6 id="c1power" class="card-subtitle mb-2 text-muted"></h6>
+                        <h6 id="c1health" class="card-subtitle mb-2 text-muted"></h6>
 
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="card-img-top text-center display-3">🐫</div>
                     <div class="card-body">
                         <h5 id="c2name" class="card-title"></h5>
-                        <h6 id="c2power" class="card-subtitle mb-2 text-muted"></h6>
+                        <h6 id="c2health" class="card-subtitle mb-2 text-muted"></h6>
 
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                     <div class="card-img-top text-center display-3">🐘</div>
                     <div class="card-body">
                         <h5 id="c3name" class="card-title"></h5>
-                        <h6 id="c3power" class="card-subtitle mb-2 text-muted"></h6>
+                        <h6 id="c3health" class="card-subtitle mb-2 text-muted"></h6>
 
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     <div class="card-img-top text-center display-3">🐶</div>
                     <div class="card-body">
                         <h5 id="c4name" class="card-title"></h5>
-                        <h6 id="c4power" class="card-subtitle mb-2 text-muted"></h6>
+                        <h6 id="c4health" class="card-subtitle mb-2 text-muted"></h6>
 
                     </div>
                 </div>
@@ -94,12 +94,15 @@
                 <h1 id="enemyCharacter" class="display-5"></h1>
             </div>
             <div class="col-12">
-                <div id="enemy">
+                <div id="enemy" class="row">
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="results">
                 </div>
             </div>
             <div class="col-12">
-                <div id="results">
-                </div>
+                <button id="reset" type="button" class="btn btn-info">Reset</button>    
             </div>
         </div>
     </div>
