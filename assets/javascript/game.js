@@ -36,6 +36,8 @@ $(function () {
         let findId = this.id;
         let crystalNum = eval(findId + 'Num');
         let currentScore = $('#score').text();
+
+        $('#instructions').hide();
         score = sumScore(currentScore, crystalNum);
         $('#score').text(score);
         if (score == winNum) {

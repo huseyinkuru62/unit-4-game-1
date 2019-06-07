@@ -146,7 +146,6 @@ $(function () {
         let selectedChar = $(this).parent();
         if (!playerSelected) {
             $('#instructions').hide();
-            $('#topBanner').hide();
             playerSelectedId = $(selectedChar).attr("id");
             selectedChar.remove();
             playerSelected = true;
